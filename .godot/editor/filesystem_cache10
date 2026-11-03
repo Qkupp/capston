@@ -1,0 +1,10 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1793720157
+area_2d.gd::GDScript::955604160363735926::1792597636::0::1::::<>Area2D<><>0<>0<><>::
+collision_shape_2d.gd::GDScript::8431433805225185198::1792599623::0::1::::<>CollisionShape2D<><>0<>0<><>::
+creature.gd::GDScript::5011125339083123786::1793386427::0::1::::<>Node2D<><>0<>0<><>::
+creature.tscn::PackedScene::4775934829687580978::1793397691::0::1::::<><><>0<>0<><>::uid://0ii0g4nqe5qr::::res://icon.svg<>uid://cdnorcsqdt2eo::::res://creature.gd<>uid://nu5wqaibuimo::::res://area_2d.gd<>uid://dseiqoi37eaxa::::res://collision_shape_2d.gd
+creature_manager.gd::GDScript::568267507052227417::1793209824::0::1::::<>Node2D<><>0<>0<><>::
+icon.svg::CompressedTexture2D::1771766854324705193::1791908843::1791908852::1::::<><><>0<>0<>6e142e2bd282999ee5ad766b11e3d47f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::8444050728653382519::1793214839::0::1::::<><><>0<>0<><>::uid://idjju62rip6p::::res://creature_manager.gd<>uid://cabq7i5qafb1s::::res://creature.tscn<>uid://0ii0g4nqe5qr::::res://icon.svg
+node_2d.tscn::PackedScene::4745039727952554427::1791999370::0::1::::<><><>0<>0<><>::uid://0ii0g4nqe5qr::::res://icon.svg
