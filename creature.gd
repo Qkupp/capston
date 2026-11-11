@@ -3,6 +3,7 @@ extends Node2D
 const TILE_SIZE: Vector2 = Vector2(16, 16)
 var amount_of_times_move = 0
 
+
 var inputs = {
 	"move_up" : Vector2.UP,
 	"move_down" : Vector2.DOWN,

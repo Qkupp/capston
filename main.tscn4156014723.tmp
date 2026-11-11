@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dskmjt1in330f"]
+
+[ext_resource type="Script" uid="uid://idjju62rip6p" path="res://creature_manager.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cabq7i5qafb1s" path="res://creature.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://0ii0g4nqe5qr" path="res://icon.svg" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://c0i1ijv18uxe8" path="res://control.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://cdj4w8xhkr1uw" path="res://button.gd" id="5_lquwl"]
+
+[sub_resource type="TileSet" id="TileSet_gefid"]
+tile_size = Vector2i(128, 128)
+
+[node name="main" type="Node2D" unique_id=1244431433]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1047641327]
+position = Vector2(512, 256)
+tile_set = SubResource("TileSet_gefid")
+rendering_quadrant_size = 128
+format = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=952515348]
+position = Vector2(580, 320)
+ignore_rotation = false
+
+[node name="creatureManager" type="Node2D" parent="." unique_id=1901639602]
+script = ExtResource("1_0xm2m")
+
+[node name="creature" parent="creatureManager" unique_id=848376107 instance=ExtResource("1_ig7tw")]
+position = Vector2(192, 208)
+
+[node name="creature2" parent="creatureManager" unique_id=783092535 instance=ExtResource("1_ig7tw")]
+position = Vector2(704, 208)
+
+[node name="background" type="Sprite2D" parent="." unique_id=2136895102]
+z_index = -100
+position = Vector2(576, 319.99997)
+scale = Vector2(9.031618, 5.2360926)
+texture = ExtResource("3_h2yge")
+
+[node name="Control" type="Control" parent="." unique_id=1033220581]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.1075432, 1.408724)
+script = ExtResource("4_1bvp3")
+
+[node name="Spawn Button" type="Button" parent="Control" unique_id=1128416715]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+script = ExtResource("5_lquwl")
+
+[connection signal="button_down" from="Control/Spawn Button" to="Control" method="_on_button_button_down"]

@@ -6,27 +6,31 @@
 [ext_resource type="Script" uid="uid://dseiqoi37eaxa" path="res://collision_shape_2d.gd" id="4_w7hms"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gefid"]
-size = Vector2(127, 128)
+size = Vector2(128.46988, 128)
 
 [node name="creature" type="Node2D" unique_id=848376107]
+scale = Vector2(0.6369672, 0.5428184)
 script = ExtResource("1_nugsn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1205869667]
-position = Vector2(0, -9)
+scale = Vector2(0.96168935, 0.8926719)
 texture = ExtResource("1_fd6ru")
 
 [node name="Label" type="Label" parent="." unique_id=1894843805]
 visible = false
-offset_left = -34.0
-offset_top = -105.0
-offset_right = 31.0
-offset_bottom = -82.0
+offset_left = -32.0
+offset_top = -88.0
+offset_right = 33.0
+offset_bottom = -65.0
 text = "selected"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1443980549]
+position = Vector2(0, 8)
+scale = Vector2(0.96168935, 0.8926719)
 script = ExtResource("3_1k0n7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=576862628]
-position = Vector2(-0.5, -9)
+position = Vector2(0.23493953, -9)
+scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_gefid")
 script = ExtResource("4_w7hms")

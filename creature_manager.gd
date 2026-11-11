@@ -15,7 +15,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#global_position = global_position.snapped(TILE_SIZE)
-	print(creature_being_dragged)
+	#print(creature_being_dragged)
 	if creature_being_dragged != null:
 		snapped_once = false
 		var mouse_pos = get_global_mouse_position()
@@ -70,13 +70,13 @@ func raycast_check_for_creature(): #keep creature on the screen
 	#if (creature_being_dragged != null && i==0):
 		#i = 1
 
-func snap_creature(pos: Vector2, tile_size_var: Vector2) -> Vector2: #snap creturs to the grid
-	var half_tile_size: Vector2 = tile_size_var * 0.5
-	#print("snap")
-	var grid_x:float = round((pos.x / half_tile_size.x + pos.y / half_tile_size.y) * 0.5) #up and to the right
-	var grid_y:float = round((pos.y / half_tile_size.y - pos.x / half_tile_size.x) * 0.5) #down to the left
-
-	return Vector2(grid_x-grid_y, grid_x+grid_y) * half_tile_size #horisanle position, vertiucal position, center of the tile
+#func snap_creature(pos: Vector2, tile_size_var: Vector2) -> Vector2: #snap creturs to the grid
+	#var half_tile_size: Vector2 = tile_size_var * 0.5
+	##print("snap")
+	#var grid_x:float = round((pos.x / half_tile_size.x + pos.y / half_tile_size.y) * 0.5) #up and to the right
+	#var grid_y:float = round((pos.y / half_tile_size.y - pos.x / half_tile_size.x) * 0.5) #down to the left
+#
+	#return Vector2(grid_x-grid_y, grid_x+grid_y) * half_tile_size #horisanle position, vertiucal position, center of the tile
 
 #spawn_creature() -> void:
 	#var scene = preload()
