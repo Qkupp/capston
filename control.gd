@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_button_down() -> void:
-	print("button has been pressed")
+	print("spawn button has been pressed")
 	spawn_creature()
 
 func spawn_creature() -> void:
@@ -25,4 +25,11 @@ func spawn_creature() -> void:
 	add_child(instance)
 	instance.position =  get_global_mouse_position() #Spawn_piont
 	
+func _on_delete_button_down() -> void:
+	print("delete button has been pressed")
+	#var creature = selected
+	delete_creature(creature)
 	
+func delete_creature(creature) -> void:
+	#queue_free(creature)
+	pass

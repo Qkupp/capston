@@ -4,10 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cabq7i5qafb1s" path="res://creature.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://0ii0g4nqe5qr" path="res://icon.svg" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://c0i1ijv18uxe8" path="res://control.gd" id="4_1bvp3"]
-[ext_resource type="Script" uid="uid://cdj4w8xhkr1uw" path="res://button.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://ee031v1nv7dd" path="res://unit_selector.gd" id="6_7mycd"]
 
 [sub_resource type="TileSet" id="TileSet_gefid"]
-tile_size = Vector2i(128, 128)
 
 [node name="main" type="Node2D" unique_id=1244431433]
 
@@ -27,11 +26,11 @@ position = Vector2(592, 288)
 [node name="creatureManager" type="Node2D" parent="." unique_id=1901639602]
 script = ExtResource("1_0xm2m")
 
-[node name="creature" parent="creatureManager" unique_id=848376107 instance=ExtResource("1_ig7tw")]
+[node name="creature" parent="creatureManager" unique_id=848376107 groups=["Selectable"] instance=ExtResource("1_ig7tw")]
 position = Vector2(416, 224)
 scale = Vector2(0.75, 0.75)
 
-[node name="creature2" parent="creatureManager" unique_id=783092535 instance=ExtResource("1_ig7tw")]
+[node name="creature2" parent="creatureManager" unique_id=783092535 groups=["Selectable"] instance=ExtResource("1_ig7tw")]
 position = Vector2(704, 208)
 scale = Vector2(0.75, 0.75)
 
@@ -53,6 +52,20 @@ script = ExtResource("4_1bvp3")
 layout_mode = 0
 offset_right = 200.0
 offset_bottom = 200.0
-script = ExtResource("5_lquwl")
+
+[node name="Delete" type="Button" parent="Control" unique_id=956422967]
+layout_mode = 0
+offset_top = 295.3027
+offset_right = 8.000007
+offset_bottom = 303.3027
+scale = Vector2(14.953966, 29.380907)
+
+[node name="Unit_selector" type="Control" parent="." unique_id=1828675934]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_7mycd")
 
 [connection signal="button_down" from="Control/Spawn Button" to="Control" method="_on_button_button_down"]
+[connection signal="button_down" from="Control/Delete" to="Control" method="_on_delete_button_down"]

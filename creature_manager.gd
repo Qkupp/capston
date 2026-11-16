@@ -53,33 +53,3 @@ func raycast_check_for_creature(): #keep creature on the screen
 	if result.size() > 0:
 		return result[0].collider.get_parent()
 	return null
-
-#func _physics_process(delta: float) -> void: #snaping to grid
-	#if creature_being_dragged == null:
-		#global_position = get_global_mouse_position()
-		#global_position = global_position.snapped(TILE_SIZE) #+ TILE_SIZE/2.0
-
-#func _physics_process(delta: float) -> void:  #snaping to grid
-	#var i = 0
-	#if (creature_being_dragged != null):# && i==1):
-		#i = 1
-		#if(i==1):
-			#global_position = global_position.snapped(TILE_SIZE) + TILE_SIZE/2.0
-			#i=0
-		#global_position = snap_creature(global_position, TILE_SIZE)
-	#if (creature_being_dragged != null && i==0):
-		#i = 1
-
-#func snap_creature(pos: Vector2, tile_size_var: Vector2) -> Vector2: #snap creturs to the grid
-	#var half_tile_size: Vector2 = tile_size_var * 0.5
-	##print("snap")
-	#var grid_x:float = round((pos.x / half_tile_size.x + pos.y / half_tile_size.y) * 0.5) #up and to the right
-	#var grid_y:float = round((pos.y / half_tile_size.y - pos.x / half_tile_size.x) * 0.5) #down to the left
-#
-	#return Vector2(grid_x-grid_y, grid_x+grid_y) * half_tile_size #horisanle position, vertiucal position, center of the tile
-
-#spawn_creature() -> void:
-	#var scene = preload()
-	#var instance = scene.instantiate()
-	#instance_position = spawn_point.position
-	#add_child(instance)
