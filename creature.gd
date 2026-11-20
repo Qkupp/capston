@@ -19,7 +19,7 @@ func handle_input(event: InputEvent) -> void:
 func move(dir):
 	var vector_pos = inputs[dir]*TILE_SIZE
 	position += vector_pos
-	
+
 func movement(dir):
 	if(dir == 'up'):
 		#position = position.y + TILE_SIZE
@@ -41,7 +41,7 @@ func movement(dir):
 	#movement('right')
 	#movement('down')
 	#movement('left')
-	
+
 var collision_mask_creature = 1
 
 var screen_size

@@ -25,12 +25,12 @@ offset_bottom = -65.0
 text = "selected"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1443980549]
-position = Vector2(0, 8)
+position = Vector2(0, 7.999998)
 scale = Vector2(0.96168935, 0.8926719)
 script = ExtResource("3_1k0n7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=576862628]
-position = Vector2(0.23493953, -9)
+position = Vector2(-2.9802322e-08, -8.96186)
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_gefid")
 script = ExtResource("4_w7hms")

@@ -5,6 +5,7 @@ var collision_mask_creature = 1
 var screen_size
 var creature_being_dragged
 var snapped_once
+#var selected
 
 const TILE_SIZE: Vector2 = Vector2(16, 16)
 
@@ -36,8 +37,12 @@ func _input(event): #manges inputs effect on the creatures
 				print(creature)
 				if creature:
 					creature_being_dragged = creature
-			else:
+					Global.selected = creature
+					#Label.visible = visible:
+			#else:
 				#creature_being_dragged.position = snap_creature(Vector2, Vector2):
+				#creature_being_dragged = null
+			if creature_being_dragged != null:
 				creature_being_dragged = null
 		else:
 			print("left click released")

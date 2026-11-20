@@ -1,2 +1,3 @@
 res://main.tscn
-res://creature_manager.gd
+res://control.gd
+res://creature.tscn

@@ -21,7 +21,13 @@ position = Vector2(580, 320)
 ignore_rotation = false
 
 [node name="Spawn_piont" type="Area2D" parent="." unique_id=228764224]
-position = Vector2(592, 288)
+position = Vector2(528, 384)
+
+[node name="background" type="Sprite2D" parent="." unique_id=2136895102]
+z_index = -100
+position = Vector2(576, 319.99997)
+scale = Vector2(9.031618, 5.2360926)
+texture = ExtResource("3_h2yge")
 
 [node name="creatureManager" type="Node2D" parent="." unique_id=1901639602]
 script = ExtResource("1_0xm2m")
@@ -33,12 +39,6 @@ scale = Vector2(0.75, 0.75)
 [node name="creature2" parent="creatureManager" unique_id=783092535 groups=["Selectable"] instance=ExtResource("1_ig7tw")]
 position = Vector2(704, 208)
 scale = Vector2(0.75, 0.75)
-
-[node name="background" type="Sprite2D" parent="." unique_id=2136895102]
-z_index = -100
-position = Vector2(576, 319.99997)
-scale = Vector2(9.031618, 5.2360926)
-texture = ExtResource("3_h2yge")
 
 [node name="Control" type="Control" parent="." unique_id=1033220581]
 layout_mode = 3
@@ -55,9 +55,9 @@ offset_bottom = 200.0
 
 [node name="Delete" type="Button" parent="Control" unique_id=956422967]
 layout_mode = 0
-offset_top = 295.3027
+offset_top = 215.7981
 offset_right = 8.000007
-offset_bottom = 303.3027
+offset_bottom = 223.7981
 scale = Vector2(14.953966, 29.380907)
 
 [node name="Unit_selector" type="Control" parent="." unique_id=1828675934]

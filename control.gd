@@ -14,22 +14,30 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+#_enter_tree().creatureManager:
 
 func _on_button_button_down() -> void:
 	print("spawn button has been pressed")
 	spawn_creature()
 
+#@export var node: Manger
+#calling over parts of the code
+@onready var node: Node = $"../creatureManager"
+@onready var spawn: Area2D = $"../Spawn_piont"
+
 func spawn_creature() -> void:
 	var creature = load("res://creature.tscn")
 	var instance = creature.instantiate()
-	add_child(instance)
-	instance.position =  get_global_mouse_position() #Spawn_piont
+	node.add_child(instance)
+	instance.position = spawn.position
+
 	
 func _on_delete_button_down() -> void:
 	print("delete button has been pressed")
-	#var creature = selected
-	delete_creature(creature)
+	print(Global.selected)
+	if Global.selected:
+		delete_creature(Global.selected)
+	
 	
 func delete_creature(creature) -> void:
-	#queue_free(creature)
-	pass
+	creature.queue_free()
